@@ -20,7 +20,7 @@
         </property>
 
         <property name="hibernate.connection.password">
-            YOUR_PASSWORD_HERE
+            root
         </property>
 
         <property name="hibernate.hbm2ddl.auto">
