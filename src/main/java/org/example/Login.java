@@ -17,9 +17,9 @@ public class Login {
 
         String hql = "Select s from Student s where s.name = ?1";
 
-//        HiberSession hs = new HiberSession();
-//        Session session = hs.getSession();
-        Session session = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory().openSession();
+        HiberSession hs = new HiberSession();
+        Session session = hs.getSession();
+//        Session session = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory().openSession();
         session.beginTransaction();
 
         Query<Student> query = session.createQuery(hql, Student.class);
